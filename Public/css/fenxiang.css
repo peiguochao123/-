@@ -1,0 +1,13 @@
+.bshare-custom icon-medium-plus{
+	width:10px;
+	position:absolute;
+}
+.bshare-custom icon-medium-plus a{
+	margin:0 auto;
+	width:2px;
+	height:2px;
+	clear:both;
+	text-align:center;
+	line-height:21px;
+	position:absolute;
+}

@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>河北敏泽科技有限公司</title>
+<meta name="keywords" content="网站建设、网站优化、SEO、网站推广、山东网站建设_山东网站优化_济南网站优化_济南seo" />
+<meta name="description" content="济南企业网站建设模板" />
+<link href="__ROOT__/Public/images/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+      
+      //表单验证
+      function checkReg()
+      {
+    	  faq_UserName=document.form.faq_UserName.value;
+    	  faq_UserEmail=document.form.faq_UserEmail.value;
+    	  faq_phone=document.form.faq_phone.value;
+    	  faqtxt=document.form.faqtxt.value;
+    	  
+    	 
+    	  if(!(/^1[3-9]{1}[\d]{9}$/.exec(faq_phone)))
+          {
+              alert("请正确输入电话！");
+              document.form.faq_phone.focus();
+              return false;
+          }
+    	  if(!(/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.exec(faq_UserEmail)))
+          {
+              alert("请正确输入邮箱！");
+              document.form.faq_UserEmail.focus();
+              return false;
+          }
+    	  if(faqtxt == "")
+          {
+              alert("请输入文章内容！");
+              document.form.faqtxt.focus();
+              return false;
+          }
+      }
+    </script>
+</head>
+
+<body>
+
+
+<include file="Public:header" />
+
+
+
+<div class="maintop"></div>
+<div class="main1"><!-- 主体内容开始 -->
+<div class="main_l"><!-- 主体左侧开始 -->
+<div class="leftbt">
+  <div class="xwtxt">服务项目</div>
+</div>
+<div class="leftbtnr">
+<li><a href="#">此处放服务项目大类别</a></li>
+<li><a href="#">室内装饰工程</a></li>
+<li><a href="#">家装类</a></li>
+<li><a href="#">工装类</a></li>
+<li><a href="#">此处放服务项目大类别</a></li>
+</div>
+<div class="leftbt"><div class="xwtxt">联系我们</div></div>
+<div class="leftbtnr">
+	<volist name="contact" id="v">
+		<li><a href="#">联系人：{$v.lx_name}</a></li>
+		<li><a href="#">电话：{$v.lx_phone}</a></li>
+		<li><a href="#">邮箱：{$v.lx_email}</a></li>
+		<li><a href="#">客服QQ：{$v.lx_qq}</a></li>
+		<li><a href="#">地址：{$v.lx_address}</a></li>
+	</volist>
+</div>
+</div><!-- 主体左侧结束 -->
+<div class="mr"><!-- 主体右侧开始 -->
+<div class="mbrbt"><img src="__ROOT__/Public/images/khly.gif" width="690" height="36" /></div>
+<div class="mrbtnr"><!-- 主体右侧内容开始 -->
+<div class="news">
+<TABLE cellSpacing=0 cellPadding=0 width=629 border=0 >
+              <TBODY>
+              <TR>
+                <TD vAlign=top width=629 height=55>欢迎使用以下表格分享您对海松科技的意见或建议。 
+                  我们会阅读所有用户反馈并用来不断改进网站。</TD></TR>
+              <TR>
+                <TD height=30>1.如果您希望我们回复您的问题，请留下您的Email地址。</TD></TR>
+              <TR>
+                <TD height=30>2.如果您要举报某条请填写该条所在处编号以及举报原因。</TD></TR>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width=646 border=0>
+                    <FORM id="form" name="form" enctype="multipart/form-data" onSubmit="return checkReg()" action="{:U('Home/Khly/add')}" method="post">
+                    <TBODY>
+                    <TR>
+                      <TD width=120 height=40>姓 名：<SPAN class=lycolor>（可不填）</SPAN></TD>
+                      <TD width=550><INPUT class=lyborder name="faq_UserName"></TD></TR>
+                    <TR>
+                      <TD height=40>E-mail:</TD>
+                      <TD><INPUT class=lyborder maxLength=49 size=24 
+                        name="faq_UserEmail"></TD>
+                    <TR>
+                      <TD height=40>电 话：</TD>
+                      <TD><INPUT class=lyborder maxLength=49 size=24 
+                        name=faq_phone> （固定电话格式：0531-62390789）</TD></TR>
+                    <TR>
+                      <TD>内 容：<BR><SPAN class=lycolor>（1000字之内）</SPAN> </TD>
+                      <TD><TEXTAREA class=lyborder2 id=message_content name=faqtxt rows=8 cols=50></TEXTAREA></TD></TR>
+                    <TR>
+                      <TD height=50>&nbsp;</TD>
+                      <TD><INPUT class=lytijiao type=submit value=提交 name=Submit height="32" width="48"> 
+                        <INPUT type=hidden value=add name=act></TD>
+                      <TD 
+              width=10>&nbsp;</TD></TR></FORM></TABLE></TD></TR></TBODY></TABLE>
+</div>
+
+</div><!-- 主体右侧内容结束 -->
+</div><!-- 主体右侧结束 -->
+</div><!-- 主体内容结束 -->
+
+
+
+<include file="Public/footer"/>
+
+</body>
+</html>

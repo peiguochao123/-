@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>河北敏泽科技有限公司</title>
+<meta name="description" content="河北敏泽科技有限公司" />
+<link href="__ROOT__/Public/images/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<include file="Public:header" />
+
+	<div class="maintop"></div>
+	<div class="main1"><!-- 主体内容开始 -->
+	<div class="main_l"><!-- 主体左侧开始 -->
+	
+	<div class="leftbt"><div class="xwtxt">新闻中心</div></div>
+	
+	<div class="leftbtnr">
+	<volist name="newsarticles" id="v">
+	<li><a href="__APP__/Home/Listxq/index/xw_id/{$v.xw_id}.html">{$v.xw_title}</a></li>
+	</volist>
+	</div>
+	
+	<div class="leftbt"><div class="xwtxt">联系我们</div></div>
+	<div class="leftbtnr">
+	
+	<foreach name="contact" item="v">
+	<li><a href="#">联系人：{$v.lx_name}</a></li>
+	<li><a href="#">电话：{$v.lx_phone}</a></li>
+	<li><a href="#">邮箱：{$v.lx_email}</a></li>
+	<li><a href="#">客服QQ：{$v.lx_qq}</a></li>
+	<li><a href="#">地址：{$v.lx_address} </a></li>
+	</foreach>
+	
+	</div>
+	</div><!-- 主体左侧结束 -->
+	<div class="mr"><!-- 主体右侧开始 -->
+	<div class="mbrbt"><img src="__ROOT__/Public/images/news.gif" /></div>
+	<div class="mrbtnr"><!-- 主体右侧内容开始 -->
+	<div class="mrnr1">
+		<h1 align="center">{$news.xw_title}</h>
+		<h5 align="center">{$news.xw_dateandtime}</h5>
+		<p align="center">{$news.xw_writer}</p>
+		<p align="center">{$news.xw_source}</p>
+		<font size="3">{$news.xw_content}</font>
+	</div>
+	
+	</div>
+	</div>
+	<!-- 主体右侧内容结束 -->
+	</div><!-- 主体右侧结束 -->
+	</div><!-- 主体内容结束 -->
+<div class="foot">版权所有 &copy; 你的网站名称 未经许可 严禁复制 <br />
+敏泽科技 版权所有<br />
+来源:<a href="http://www.mycodes.net/" target="_blank">源码之家</a> </div>
+
+<script src='//kefu.easemob.com/webim/easemob.js?tenantId=26380&hide=false&sat=false' async='async'></script>
+
+</body>
+</html>

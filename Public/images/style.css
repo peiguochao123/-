@@ -1,0 +1,111 @@
+﻿/* 总体 */
+body{margin:0px;font-size: 12px;color: #6f6;background: #391904;font-family: Arial, Helvetica, sans-serif;}
+h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,form,img,p,blockquote{margin:0; padding:0; border:none; list-style-type:none;}
+a{color: #5ba2ff;text-decoration: none;}
+a:hover{color: #FF3300;	text-decoration: none;}
+/* 框架 */
+.content{margin:0px auto;width:1003px;background: #e9e2d8;overflow:hidden;}
+/* 顶部部分*/
+.headtop{margin:0 auto;width:990px; height:20px; background-image:url(top1.gif); clear:both;overflow:hidden;}
+.headtop2{margin:0 auto;width:990px; height:81px; background-image:url(top2bj.gif);overflow:hidden;}
+
+.logo{ float:left;width:226px; height:78px; margin-left:30px;background-image:url(logo.png);overflow:hidden;}
+.tel{width:258; height:31;font-size:20px;}
+.headr{ float:left;width:600px; height:70px; margin-left:40px;overflow:hidden;}
+.headr li{ float:right;width:550px; height:31px; text-align:right; color:#e1c351; line-height:24px;overflow:hidden;}
+.headr li a{color:#e1c351;  text-decoration:none}
+.headr li a:hover{color:#d70c7f}
+/*主体导航菜单*/
+.menu {margin:0 auto; width:990px; height:46px;background:url(main_1.gif) repeat-x;text-align:center; }
+.menu li { display:block; float:left; margin-left:4px;}
+.menu li.line {float:left; width:4px; height:46px; background:url(main_x.gif); overflow:hidden}
+.menu li a { width:108px; height:46px; margin:0px 1px; display:block; font-size:14px; line-height:43px; color:#FFF; font-weight:bold; text-decoration:none; }
+.menu li a:hover { width:108px; height:46px;background:url(main_2.gif) no-repeat; color:#000 }
+
+/*主体幻灯部分*/
+.slider3 {margin:0 auto; width:990px; height:250px; margin-top:5px;  }
+.container{margin:0 auto;width:990px; height:250px; overflow:hidden;position:relative; }
+.slider{position:absolute; float:left}
+.slider li{ list-style:none;display:inline;}
+.slider img{float:left; width:990px; height:250px; display:block;  overflow:hidden}
+
+.slider2{width:20000px; float:left}
+.slider2 li{float:left;}
+
+.num{ position:absolute; right:5px; bottom:5px;}
+.num li{
+	float: left;
+	color: #FF7300;
+	text-align: center;
+	line-height: 16px;
+	width: 16px;
+	height: 16px;
+	font-family: Arial;
+	font-size: 12px;
+	cursor: pointer;
+	overflow: hidden;
+	margin: 3px 1px;
+	border: 1px solid #FF7300;
+	background-color: #fff;
+}
+.num li.on{
+	color: #fff;
+	line-height: 21px;
+	width: 21px;
+	height: 21px;
+	font-size: 16px;
+	margin: 0 1px;
+	border: 0;
+	background-color: #FF7300;
+	font-weight: bold;
+}
+/*主体内容部分*/
+.maintop {margin:0 auto; width:990px; height:17px;background-image: url(maintop.gif);clear:both;coverflow:hidden }
+.main,.main1{margin:0 auto; width:990px;background-color:#391904; border-bottom:1px solid #4f331e;  overflow:hidden }
+.main{height:540px;}
+.main_l{ float:left; width:280px; height:520px;overflow:hidden }
+.leftbt {margin:0 auto; width:256px; height:60px; background-image: url(leftbt.gif);clear:both;coverflow:hidden }
+.xwtxt{ margin:0 auto; width:80px; height:20px; line-height:19px; text-align:center; margin-top:18px; font-size:14px; font-weight:bold; color:#e4c67d; overflow:hidden }
+.leftbtnr {margin:0 auto; width:256px; height:190px;margin-bottom:5px;overflow:hidden }
+.leftbtnr li{ float:left; width:230px; height:37px; background-image:url(xw.gif); color:#9a816b; text-indent:22px;  line-height:32px; margin:0px 0 0 10px;overflow:hidden }
+.leftbtnr li a{color:#9a816b; text-decoration:none}
+.leftbtnr li a:hover{color:#f36e06}
+.main_r{ float:left; width:690px; margin-left:8px;height:540px;overflow:hidden }
+.mbrbt{ float:left; width:690px;height:36px; margin-top:5px;overflow:hidden }
+.mbrbtnr{ float:left; width:690px;height:230px;background-image:url(rbj.gif);overflow:hidden }
+.mbrnr{ margin:0 auto; width:620px; height:180px;margin-top:22px;overflow:hidden }
+.mbrnr dt{ float:left; width:196px; height:154px;margin:10px 0 0 2px; padding:2px; border:1px solid #604929;overflow:hidden }
+.mbrnr dd{ float:left; width:400px; height:170px;margin:10px 0 0 12px; color:#a48974; line-height:25px;overflow:hidden }
+.mbrnr dd a{color:#a48974; text-decoration:none}
+.mbrnr dd a:hover{color:#f36e06}
+.mbgcal{ margin:0 auto; width:610px; height:180px;margin-top:20px;overflow:hidden }
+.gcpic{ float:left; width:610px; height:180px;margin:5px 0 0 10px; border:1px solid #5b482a;overflow:hidden }
+/*主体底部分*/
+.foot {margin:0 auto; width:990px; height:100px;clear:both; text-align:center; line-height:21px; padding-top:10px; background:#391904; color:#7f695f;overflow:hidden }
+/*主体内页部分*/
+.mr{ float:left; width:690px; margin-left:8px;overflow:hidden }
+.mrbtnr{ float:left; width:690px; margin-bottom:20px;overflow:hidden }
+.mrnr{ margin:0 auto; width:620px;margin-top:22px; color:#958273; line-height:26px; text-indent:25px;overflow:hidden }
+.mrnr1{ margin:0 auto; width:700px;margin-top:12px; overflow:hidden }
+.mrnrimg {  width:343px; height:300px;margin-top:12px; border:1px solid #604929; text-align:center; padding:0; float:left}
+.mrnrimg2{  width:343px; height:300px;margin-top:12px; border:0px solid #604929; text-align:center; color:#95ff73; float:left}
+.mrnrimgt{ margin:0 auto; width:600px; height:200px;margin-top:10px; color:#95ff73; text-align:center; margin-bottom:5px;  line-height:25px;overflow:hidden }
+.mrnr1 li{ float:left; width:220px; height:210px;margin:25px 0 0 8px; border:1px solid #6a4e39;overflow:hidden }
+.mrnr1 li dt{ float:left; width:200px; height:160px;margin:4px 0 0 5px;text-align:center; overflow:hidden }
+.mrnr1 li dd{ float:left; width:200px; height:28px;margin:3px 0 0 5px; text-align:center;color:#815f42; line-height:25px;overflow:hidden }
+.mrnr1 li dd a{color:#815f42; text-decoration:none}
+.mrnr1 li dd a:hover{color:#f36e06}
+/* 内页 */
+.news{ margin:0 auto; width:670px;margin-top:12px; color:#826043; overflow:hidden }
+.news table{color:#826048}
+.news dt{ float:left; width:520px;height:27px;margin:2px 0 0 5px;text-align:left; line-height:27px;overflow:hidden }
+.news dd{ float:left; width:120px;height:27px;margin:2px 0 0 16px; text-align:left;color:#815f42; line-height:27px;overflow:hidden }
+.news dt a{color:#815f42; text-decoration:none}
+.news dt a:hover{color:#f36e06}
+/* 内页翻页 */
+.fanye {margin:0 auto;width:614px; height:27px;padding:3px; margin-top:15px; clear:both; text-align:center;overflow:hidden }
+.fanye A { border: #472c19 1px solid; padding:2px 5px 2px 5px;margin:2px;  color: #84664a; text-decoration:underline}
+.fanye A:hover {border: #472c19 1px solid; color: #f75406;}
+.fanye A:active {border: #472c19 1px solid;color: #ebd476; }
+.fanye SPAN.current {border: #594127 1px solid; padding:2px 5px 2px 5px;margin:2px; color: #8d6a4e;}
+.fanye SPAN.disabled {border: #926f53 1px solid; padding:2px 5px 2px 5px;margin:2px; color:#926f53; }

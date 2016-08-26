@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>后台管理系统</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <link href="__ROOT__/Public/images/admin.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="__ROOT__/library/jquery/jquery-1.4.js"></script>
+     <script type="text/javascript">
+     	var oldzp_id;//原来的Id
+ 		var oldzp_position;//原来的typeName
+	  	var oldzp_experience;//原来articleNums
+ 		var oldzp_schooling;//原来的超链接
+ 		var oldzp_wage;//原来的超链接
+  
+  		function showType(zp_id)
+		{
+  		
+	         oldzp_id = zp_id;
+	         oldzp_position = $("#td"+zp_id+"1").html();
+	         oldzp_experience = $("#td"+zp_id+"2").html();
+	         oldschooling = $("#td"+zp_id+"3").html();
+	         $("#td"+zp_id+"0").css("background-color","#D3D6FF");
+	         $("#td"+zp_id+"1").html("<input type='text' name='zp_position' size='10' value='"+oldzp_positione+"'>");
+	         $("#td"+zp_id+"2").html("<input type='text' name='zp_experience' size='10' value='"+oldzp_experience+"'>");
+	         $("#td"+zp_id+"3").html("<a href='#' onclick='submitForm()'>更新</a>&nbsp;&nbsp;<a href='#' onclick='hideText()'>取消</a>");
+		}
+     //点击了取消按扭
+     	function hideText()
+     	{
+		   	 $("#td"+zp_id+"0").css("background-color","#FFFFFF");
+		   	 $("#td"+zp_id+"1").html(oldzp_position);
+		   	 $("#td"+zp_id+"2").html(oldzp_experience);
+		   	 $("#td"+zp_id+"3").html(oldzp_schooling);
+     	}
+	   //点击了更新按扭
+	    function submitForm()
+	    {
+	         document.frm.action = "__APP__/Admin/ModZhaopin/up/zp_id/"+oldzp_id;
+	         document.frm.submit();//提交表单
+	    }
+	   
+	    function del(zp_id)
+	    {  
+	    	 window.location="__APP__/Admin/ModZhaopin/del/zp_id/"+zp_id;
+	    }
+	      
+	     //
+	    
+    </script>
+  </head>
+  <body>
+    <!-- 网站的头 -->
+    <include file="Public:header"/>
+       <!-- 当前位置 -->
+    <div class="locationDiv">&nbsp;: 后台管理 : 修改新闻</div>
+    <!-- 正文内容 -->
+    <div class="mainDiv clear">
+      <!-- 左侧树状列表 -->
+      <div class="leftDiv">
+      <include file="Public:left"/>
+      </div>
+      <!-- 右侧页面内容 -->
+      <div class="rightDiv">
+        <br>
+       
+        <br>
+        <table border="1" align="center" width="700" cellpadding="0" cellspacing="0">
+          <tr height="30" style="font-weight:bold;">
+            <td>职位</td>
+            <td>经验</td>
+            <td>学历</td>
+            <td>工资</td>
+            
+            <td>&nbsp;</td>
+          </tr>
+          <volist name="recruitment" id="v">
+          <tr height="25">
+            <td>{$v.zp_position }</td>
+            <td>{$v.zp_experience}</td>
+            <td>{$v.zp_schooling}</td>
+            <td align="left">{$v.zp_wage}</a></td>
+            
+            <td>
+            	<a href="#" onclick='showType({$v.zp_id})'>编辑</a>
+            	<a href="#" onclick='del({$v.zp_id})'>删除</a>
+            </td>
+          </tr>
+          </volist>
+          
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,65 @@
+﻿<script type="text/javascript">
+  $(document).ready(function(){
+	  $("#menuDiv1,#menuDiv2,#menuDiv3,#menuDiv4,#menuDiv5").hover(function(){
+		  $(this).css("background-color","#D4D0C8");
+		  $(this).find("div").show();
+	  },function(){
+		  $(this).css("background-color","#E4E9EC");
+		  $(this).find("div").hide();
+	  });
+  });
+  //退出后台
+  function logout()
+  {
+	  if(confirm("是否退出后台管理系统?"))
+	  {
+		  window.location = "__APP__/Index/index";
+	  }
+  }
+</script>
+<div class="headDiv">
+  <div class="headDiv1">www.ttnewS.com</div>
+  <div class="headDiv2"><img src="__ROOT__/public/images/image6.gif"></div>
+</div>
+<div class="headDiv3">&nbsp;</div>
+<!-- 导航菜单 -->
+<div class="menuDiv">
+  <div id="menuDiv1"><a href="#" onclick="logout()">重新登陆</a></div>
+  <div id="menuDiv2"><a href="#">公司简介</a><br>
+    <div>
+      <a href="{:U('Admin/AddGsjj/index')}">添加简介</a><br>
+      <a href="{:U('Admin/ModGsjj/index')}">修改简介</a>
+    </div>
+  </div>
+  <div id="menuDiv3"><a href="#">服务项目</a><br>
+    <div>
+      <a href="{:U('Admin/AddFwxm/index')}">添加项目</a><br>
+      <a href="{:U('Admin/ModFwxm/index')}">修改项目</a>
+    </div>
+  </div>
+  <div id="menuDiv3"><a href="#">工程案例</a><br>
+    <div>
+      <a href="{:U('Admin/AddGcal/index')}">添加案例</a><br>
+      <a href="{:U('Admin/ModGcal/index')}">修改案例</a>
+    </div>
+  </div>
+  <div id="menuDiv3"><a href="#">新闻动态</a><br>
+    <div>
+      <a href="{:U('Admin/AddList/index')}">添加新闻</a><br>
+      <a href="{:U('Admin/ModList/index')}">修改新闻</a>
+    </div>
+  </div>
+  <div id="menuDiv3"><a href="#">人才招聘</a><br>
+    <div>
+      <a href="{:U('Admin/AddZhaopin/index')}">添加招聘</a><br>
+      <a href="{:U('Admin/ModZhaopin/index')}">修改招聘</a>
+    </div>
+  </div>
+  <div id="menuDiv3"><a href="#">联系我们</a><br>
+    <div>
+      <a href="{:U('Admin/AddLianxi/index')}">添加联系</a><br>
+      <a href="{:U('Admin/ModLianxi/index')}">修改联系</a>
+    </div>
+  </div>
+  <div id="menuDiv5"><a href="{:U('Admin//Index/index')}">返回首页</a></div>
+</div>   

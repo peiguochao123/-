@@ -1,0 +1,45 @@
+﻿<script type=text/javascript src="__ROOT__/library/dtree/js/dtree.js"></script>
+<script  type=text/javascript> 
+  function hello()
+  {
+    d = new dTree('d','__ROOT__/library/dtree/');
+
+    d.add(0,-1,'后台管理','');
+
+    d.add(1,0,'重新登陆','javascript:logout()');
+
+    d.add(2,0,'公司简介','');
+    d.add(21,2,'添加简介','__APP__/admin/AddGsjj/index');
+    d.add(22,2,'修改简介','__APP__/admin/ModGsjj/index');
+
+    d.add(3,0,'服务项目','');
+    d.add(31,3,'添加项目','__APP__/admin/AddType/index');
+    d.add(32,3,'修改项目','__APP__/admin/ModType/index');
+    
+    d.add(4,0,'工程案例','');
+    d.add(41,4,'添加案例','__APP__/admin/AddType/index');
+    d.add(42,4,'修改案例','__APP__/admin/ModType/index');
+    
+    d.add(5,0,'新闻动态','');
+    d.add(51,5,'添加新闻','__APP__/admin/AddType/index');
+    d.add(52,5,'修改新闻','__APP__/admin/ModType/index');
+    
+    d.add(6,0,'人才招聘','');
+    d.add(61,6,'添加招聘','__APP__/admin/AddType/index');
+    d.add(62,6,'修改招聘','__APP__/admin/ModType/index');
+    
+    d.add(7,0,'联系我们','');
+    d.add(71,7,'添加联系','__APP__/admin/AddType/index');
+    d.add(72,7,'修改联系','__APP__/admin/ModType/index');
+    
+    d.add(8,0,'客户留言','');
+    d.add(81,8,'查看留言','__APP__/admin/Message/index');
+    
+
+    d.add(9,0,'返回首页','__APP__/admin/Index/index');
+
+    document.write(d);
+  }
+
+  hello();
+</script>

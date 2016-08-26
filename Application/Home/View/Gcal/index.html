@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>河北敏泽科技有限公司</title>
+<meta name="keywords" content="网站建设、网站优化、SEO、网站推广、山东网站建设_山东网站优化_济南网站优化_济南seo" />
+<meta name="description" content="济南企业网站建设模板" />
+<link href="__ROOT__/Public/images/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+	<include file="Public:header" />
+	
+	<div class="maintop"></div>
+	<div class="main1"><!-- 主体内容开始 -->
+	<div class="main_l"><!-- 主体左侧开始 -->
+	<div class="leftbt">
+	  <div class="xwtxt">服务项目</div>
+	</div>
+	<div class="leftbtnr">
+	<li><a href="#">此处放服务项目大类别</a></li>
+	<li><a href="#">室内装饰工程</a></li>
+	<li><a href="#">家装类</a></li>
+	<li><a href="#">工装类</a></li>
+	<li><a href="#">此处放服务项目大类别</a></li>
+	</div>
+	<div class="leftbt"><div class="xwtxt">联系我们</div></div>
+	<div class="leftbtnr">
+		<volist name="contact" id="v">
+			<li><a href="#">联系人：{$v.lx_name}</a></li>
+			<li><a href="#">电话：{$v.lx_phone}</a></li>
+			<li><a href="#">邮箱：{$v.lx_email}</a></li>
+			<li><a href="#">客服QQ：{$v.lx_qq}</a></li>
+			<li><a href="#">地址：{$v.lx_address}</a></li>
+		</volist>
+	</div>
+	</div><!-- 主体左侧结束 -->
+	
+	<div class="mr"><!-- 主体右侧开始 -->
+		<div class="mbrbt"><img src="__ROOT__/Public/images/gcal.gif" /></div>
+		<div class="mrbtnr"><!-- 主体右侧内容开始 -->
+		<div class="mrnr1">
+		<volist name="gcal" id="v">
+			<li><dt>
+				<a href="__APP__/Home/Pro/index/al_id/{$v.al_id}.html">
+					<img src="__ROOT__/Public/uploads/{$v.imagepath}" border="0" />
+				</a>
+				</dt>
+				<!-- <dd> -->
+						 {$v.al_name}&nbsp;
+					面积:{$v.al_area}&nbsp;
+					风格:{$v.al_style}&nbsp;
+					作者:{$v.al_author}<br />
+						 {$v.al_content}
+				<!-- </dd> -->
+			</li>
+		</volist>
+			
+		</div>
+		<div class="fanye"><span class="disabled"> < </span><span class="current">1</span><a href="#?page=2">2</a><a href="#?page=3">3</a><a href="#?page=4">4</a><a href="#?page=5">5</a><a href="#?page=6">6</a><a href="#?page=7">7</a>...<a href="#?page=199">199</a><a href="#?page=200">200</a><a href="#?page=2"> > </a></div>
+		</div><!-- 主体右侧内容结束 -->
+	</div><!-- 主体右侧结束 -->
+	</div><!-- 主体内容结束 -->
+	
+	<include file="Public/footer"/>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>后台管理系统</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <link href="__ROOT__/Public/images/admin.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="__ROOT__/library/jquery/jquery-1.4.js"></script>
+    <script>         
+      function del(ly_Id){
+    	  
+    	  window.location="__APP__/Admin/Message/del/ly_Id/"+ly_Id;
+      }
+      
+      
+    </script>
+  </head>
+  <body>
+    <!-- 网站的头 -->
+    <include file="Public:header"/> <!-- 当前位置 -->
+    
+    <div class="locationDiv">&nbsp;: 后台管理 : 管理首页</div>
+    <!-- 正文内容 -->
+    <div class="mainDiv clear">
+      <!-- 左侧树状列表 -->
+      <div class="leftDiv"><include file="Public:left"/></div>
+      <!-- 右侧页面内容 -->
+       <div class="rightDiv">
+        <br>
+       
+        <br>
+        <table border="1" align="center" width="700" cellpadding="0" cellspacing="0">
+          <tr height="30" style="font-weight:bold;">
+            <td align="center">姓名</td>
+            <td align="center">邮箱</td>
+            <td align="center">电话</td>
+            <td align="center">内容</td>
+            <td>&nbsp;</td>
+          </tr>
+          <volist name="message" id="v">
+          <tr height="25">
+            <td>{$v.ly_name}</td>
+            <td>{$v.ly_email}</td>
+            <td>{$v.ly_phone}</td>
+            <td>{$v.ly_body}</td>
+            
+            
+            <td><a href="#" onclick='del({$v.ly_id})'>删除</a></td>
+          </tr>
+          </volist>
+          
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+

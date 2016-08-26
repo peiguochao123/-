@@ -1,0 +1,67 @@
+﻿<style>
+*{ margin:0; padding:0; list-style:none;}
+img{ border:0;}
+
+.jd_ad_slide {width: 990px; height: 250px; margin:0 auto; overflow:hidden;position: relative;} 
+.jd_ad_img {position: absolute; left: 0; top: 0;width: 100%; height: 100%;display: none; background:url(http://www.lanrenzhijia.com/demo/images/loading.gif) no-repeat center center;}
+.jd_ad_btn {position: absolute; right: 3px; bottom: 8px;}
+.jd_ad_btn_a {width: 22px; height: 22px;line-height: 22px;margin-right: 5px;text-align: center;border-radius: 11px;background: #999;color: #fff;float: left; text-decoration:none;}
+.jd_ad_btn_a:hover {text-decoration: none;}
+.jd_ad_btn .active {background: #E4393C;}
+</style>
+
+
+<div class="headtop"></div>
+<div class="headtop2"><!-- 主体顶部开始 -->
+<div class="logo"></div>
+<div class="headr">
+<li><a href="#">设为首页</a> | <a href="#">加入收藏</a></li>
+<li class="tel">咨询电话:17073428276</li>
+</div>
+</div><!-- 主体顶部结束 -->
+<div class="menu"><!-- 主体导航开始 -->
+	<li><a href="{:U('Index/index')}" class="a">网站首页</a></li>
+	<li class="line"></li>
+	<li><a href="{:U('Gsjj/index')}" class="a">公司简介</a></li>
+	<li class="line"></li>
+	<li><a href="{:U('Fwxm/index')}">服务项目</a></li>
+	<li class="line"></li>
+	<li><a href="{:U('Gcal/index')}">工程案例</a></li>
+	<li class="line"></li>
+	<li><a href="{:U('List/index')}">新闻动态</a></li>
+	<li class="line"></li>
+	<li><a href="{:U('Khly/index')}">客户留言</a></li>
+	<li class="line"></li>
+	<li><a href="{:U('Zhaopin/index')}">人才招聘</a></li>
+	<li class="line"></li>
+	<li><a href="{:U('Lianxi/index')}">联系我们</a></li>
+</div><!-- 主体导航结束 -->
+
+<div id="jdAdSlide" class="jd_ad_slide">
+	<img src="__ROOT__/Public/images/banner.jpg" class="jd_ad_img">
+	<img data-src="__ROOT__/Public/images/banner2.jpg" class="jd_ad_img">
+	<img data-src="__ROOT__/Public/images/banner3.jpg" class="jd_ad_img">
+	<div id="jdAdBtn" class="jd_ad_btn"></div>
+</div>
+
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery-powerSwitch-min.js"></script>
+<script>
+var htmlAdBtn = '';
+$("#jdAdSlide img").each(function(index, image) {
+	var id = "adImage" + index;
+	htmlAdBtn = htmlAdBtn + '<a href="javascript:" class="jd_ad_btn_a" data-rel="'+ id +'">'+ (index + 1) +'</a>';
+	image.id = id;
+});
+$("#jdAdBtn").html(htmlAdBtn).find("a").powerSwitch({
+	eventType: "hover",
+	classAdd: "active",
+	animation: "fade",
+	autoTime: 5000,
+	onSwitch: function(image) {
+		if (!image.attr("src")) {
+			image.attr("src", image.attr("data-src"));	
+		}
+	}
+}).eq(0).trigger("mouseover");
+</script>

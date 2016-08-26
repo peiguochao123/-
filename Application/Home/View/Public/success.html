@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>系统提示信息</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <link href="__ROOT__/Public/images/style.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript">
+    var index=100;
+      function changeTime()
+      {
+    	  document.getElementById("timeSpan").innerHTML=index;
+    	  index--;
+    	  if(index>0)
+    		  {
+    		  window.setTimeout("changeTime()",1000);
+    		  }else{
+    			  window.location="{$jumpUrl}";
+    		  }
+      }
+    </script>
+  </head>
+  <body onload="changeTime()">
+    <!-- 网站头 -->
+    
+	<include file="Public:header"/>
+	<!-- 正文内容 -->
+	
+<div class="maintop"></div>
+<div class="main1"><!-- 主体内容开始 -->
+	<div class="main_l"><!-- 主体左侧开始 -->
+		<div class="leftbt">
+	  		<div class="xwtxt">服务项目</div>
+		</div>
+		<div class="leftbtnr">
+			<li><a href="#">此处放服务项目大类别</a></li>
+			<li><a href="#">室内装饰工程</a></li>
+			<li><a href="#">家装类</a></li>
+			<li><a href="#">工装类</a></li>
+			<li><a href="#">此处放服务项目大类别</a></li>
+		</div>
+		<div class="leftbt"><div class="xwtxt">联系我们</div></div>
+		<div class="leftbtnr">
+			<volist name="contact" id="v">
+				<li><a href="#">联系人：{$v.lx_name}</a></li>
+				<li><a href="#">电话：{$v.lx_phone}</a></li>
+				<li><a href="#">邮箱：{$v.lx_email}</a></li>
+				<li><a href="#">客服QQ：{$v.lx_qq}</a></li>
+				<li><a href="#">地址：{$v.lx_address}</a></li>
+			</volist>
+		</div>
+	</div><!-- 主体左侧结束 -->
+	<div class="mr"><!-- 主体右侧开始 -->
+		<div class="mbrbt"><img src="__ROOT__/Public/images/khly.gif" width="690" height="36" /></div>
+		<div class="mrbtnr"><!-- 主体右侧内容开始 -->
+		<div class="news"><br>
+			<div class="mainDiv clear" style="border:1px solid #990100;">
+		  		<!-- 提示信息 -->
+				<div class="newsTypeDiv" style="border:1px solid #990100;">
+					<div class="newsTypeDiv1">&nbsp;系统提示信息</div>
+					<div class="newsTypeDiv2">&nbsp;</div>
+				</div>
+				<div class="searchDiv" style="height:90px;">
+					<br><?php echo $message?>页面将在 <span id="timeSpan">100</span> 秒钟内自动跳转！
+					<br><br>如果没有自动跳转，<a href="<?php echo $jumpUrl?>">请点击这里</a>。<br><br>
+				</div>
+		  	</div>
+		</div>
+		</div><!-- 主体右侧内容结束 -->
+	</div><!-- 主体右侧结束 -->
+</div><!-- 主体内容结束 -->
+	
+	
+	
+	
+	
+	  
+	
+    
+    
+    <!-- 网页脚 -->
+    <include file="Public:footer"/>
+  </body>
+</html>
